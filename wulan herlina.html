@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Halaman E-commerce Sederhana</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Hero Section / Beranda -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Halaman E-commerce Sederhana</h1>
+      <h2>Brown Bag Wulan Store</h2>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
+      <a href="#produk" class="btn">Belanja Sekarang</a>
+    </div>
+  </header>
+
+  <!-- Navigasi -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
+      <li><a href="#produk"><i class="fa fa-bag-shopping"></i> Produk</a></li>
+      <li><a href="#keranjang"><i class="fa fa-cart-shopping"></i> Keranjang</a></li>
+      <li><a href="#wishlist"><i class="fa fa-heart"></i> Wishlist</a></li>
+      <li><a href="#kontak"><i class="fa fa-envelope"></i> Kontak</a></li>
+    </ul>
+    <div class="search-box">
+      <input type="text" placeholder="Cari produk...">
+      <button><i class="fas fa-search"></i></button>
+    </div>
+  </nav>
+
+  <!-- Produk -->
+  <main id="produk">
+    <h2>Daftar Produk</h2>
+    <div class="product-grid">
+  
+      <div class="product">
+        <img src="image/tas1.jpg" alt="Tas Kulit Coklat">
+        <h3>Tas Kulit Coklat</h3>
+        <p>Tas klasik dengan bahan kulit berkualitas, cocok untuk tampilan elegan sehari-hari.</p>
+        <p>Rp250.000</p>
+        <button class="beli-btn" data-nama="Tas Kulit Coklat" data-harga="250000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas2.jpg" alt="Tas Ransel Ivory">
+        <h3>Tas Ransel Ivory</h3>
+        <p>Desain minimalis dengan warna ivory yang lembut, nyaman untuk bepergian.</p>
+        <p>Rp300.000</p>
+        <button class="beli-btn" data-nama="Tas Ransel Ivory" data-harga="300000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas3.jpg" alt="Tas Selempang">
+        <h3>Tas Selempang</h3>
+        <p>Ringan dan praktis, tas ini pas untuk kamu yang aktif dan stylish.</p>
+        <p>Rp220.000</p>
+        <button class="beli-btn" data-nama="Tas Selempang" data-harga="220000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas4.jpg" alt="Tas Travel">
+        <h3>Tas Travel</h3>
+        <p>Kapasitas luas dan kuat, cocok untuk perjalanan jauh atau akhir pekan.</p>
+        <p>Rp400.000</p>
+        <button class="beli-btn" data-nama="Tas Travel" data-harga="400000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas5.jpg" alt="Tas Formal">
+        <h3>Tas Formal</h3>
+        <p>Tas berstruktur dengan nuansa profesional untuk menunjang penampilan kerja.</p>
+        <p>Rp320.000</p> 
+        <button class="beli-btn" data-nama="Tas Formal" data-harga="320000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas6.jpg" alt="Tas Fashion">
+        <h3>Tas Fashion</h3>
+        <p>Tampil trendy dengan tas modis ini, sempurna untuk melengkapi OOTD-mu.</p>
+        <p>Rp275.000</p>
+        <button class="beli-btn" data-nama="Tas Fashion" data-harga="275000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas7.jpg" alt="Tas Tote Ivory">
+        <h3>Tas Tote Ivory</h3>
+        <p>Ruang besar dan desain simpel, pas untuk kerja atau kuliah.</p>
+        <p>Rp230.000</p>
+        <button class="beli-btn" data-nama="Tas Tote Ivory" data-harga="230000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas8.jpg" alt="Tas Selempang Mini">
+        <h3>Tas Selempang Mini</h3>
+        <p>Ukuran mini namun fungsional, cocok untuk hangout santai.</p>
+        <p>Rp180.000</p>
+        <button class="beli-btn" data-nama="Tas Selempang Mini" data-harga="180000">Beli</button>
+      </div>
+  
+      <div class="product">
+        <img src="image/tas9.jpg" alt="Tas Santai">
+        <h3>Tas Santai</h3>
+        <p>Desain kasual dengan warna netral, pas untuk digunakan setiap hari.</p>
+        <p>Rp190.000</p>
+        <button class="beli-btn" data-nama="Tas Santai" data-harga="190000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas10.jpg" alt="Tas Jinjing Elegan">
+        <h3>Tas Jinjing Elegan</h3>
+        <p>Desain premium dengan sentuhan glamor, cocok untuk acara formal dan pesta.</p>
+        <p>Rp350.000</p>
+        <button class="beli-btn" data-nama="Tas Jinjing Elegan" data-harga="350000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas11.jpg" alt="Tas Choco Chic Tote">
+        <h3>Tas Choco Chic Tote</h3>
+        <p>Aksen metalik yang memberikan kesan mewah. Cocok untuk tampilan formal dan kasual.</p>
+        <p>Rp650.000</p>
+        <button class="beli-btn" data-nama="Tas Choco Chic Tote" data-harga="650000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas12.jpg" alt="Tas Casual Zip Sling Bag">
+        <h3>Tas Casual Zip Sling Bag</h3>
+        <p>Desain tas selempang santai dengan warna netral dan model zip yang praktis.</p>
+        <p>Rp630.000</p>
+        <button class="beli-btn" data-nama="Tas Casual Zip Sling Bag" data-harga="630000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas13.jpg" alt="Tas Elegant Croco Choco">
+        <h3>Tas Elegant Croco Choco</h3>
+        <p>Desain kulit buaya warna coklat yang menonjolkan kesan elegan dan premium.</p>
+        <p>Rp700.000</p>
+        <button class="beli-btn" data-nama="Tas Elegant Croco Choco" data-harga="700000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas14.jpg" alt="Tas Brown Mini Handbag">
+        <h3>Tas Brown Mini Handbag</h3>
+        <p>Desain tas tangan mini elegan. Warna coklat yang bold menjadi pelengkap gaya yang memikat.</p>
+        <p>Rp550.000</p>
+        <button class="beli-btn" data-nama="Tas Brown Mini Handbag" data-harga="550000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas15.jpg" alt="Tas Brown Classic Shoulder Bag">
+        <h3>Tas Brown Classic Shoulder Bag</h3>
+        <p>Desain simpel namun berkelas. Ideal untuk kegiatan sehari-hari.</p>
+        <p>Rp500.000</p>
+        <button class="beli-btn" data-nama="Tas Brown Classic Shoulder Bag" data-harga="500000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas16.jpg" alt="Tas Soft Ivory Shoulder Bag">
+        <h3>Tas Soft Ivory Shoulder Bag</h3>
+        <p>Tas bahu berbahan lembut warna ivory dengan desain fleksibel. Memberi kenyamanan maksimal.</p>
+        <p>Rp500.000</p>
+        <button class="beli-btn" data-nama="Tas Soft Ivory Shoulder Bag" data-harga="500000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas17.jpg" alt="Tas Ivory Croco Texture ">
+        <h3>Tas Ivory Croco Texture</h3>
+        <p>Bertekstur croco dengan warna ivory elegan. Gaya minimalis dalam produk.</p>
+        <p>Rp530.000</p>
+        <button class="beli-btn" data-nama="Tas Ivory Croco Texture " data-harga="530000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas18.jpg" alt="Tas Ivory Compact Sling">
+        <h3>Tas Ivory Compact Sling</h3>
+        <p>Tas selempang ivory cocok untuk acara santai atau jalan-jalan. Menambah sentuhan modern.</p>
+        <p>Rp480.000</p>
+        <button class="beli-btn" data-nama="Tas Ivory Compact Sling" data-harga="480000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas19.jpg" alt="Tas Elegant Ivory Croco">
+        <h3>Tas Elegant Ivory Croco</h3>
+        <p>Tas dengan tekstur kulit buaya dan warna ivory elegan.</p>
+        <p>Rp560.000</p>
+        <button class="beli-btn" data-nama="Tas Elegant Ivory Croco" data-harga="560000">Beli</button>
+      </div>
+
+      <div class="product">
+        <img src="image/tas20.jpg" alt="Tas Ivory Formal Handbag">
+        <h3>Tas Ivory Formal Handbag</h3>
+        <p>Tas formal ivory yang bersih dan profesional. Cocok dipadukan dengan outfit kerja.</p>
+        <p>Rp400.000</p>
+        <button class="beli-btn" data-nama="Tas Ivory Formal Handbag" data-harga="400000">Beli</button>
+      </div>
+
+    </div>
+  </main>
+
+<!-- Keranjang -->
+<section id="keranjang">
+  <div class="container">
+    <h2>🛒 Keranjang Belanja</h2>
+    <div class="cart-wrapper">
+      <table class="cart-table" id="tabel-keranjang">
+        <thead>
+          <tr>
+            <th>Nama Produk</th>
+            <th>Jumlah</th>
+            <th>Harga</th>
+            <th>Total</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Item akan ditambahkan di sini -->
+        </tbody>
+      </table>
+      <div class="cart-summary">
+        <p id="total-belanja">Total: Rp0</p>
+        <button id="checkout" class="checkout-btn">Checkout</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Wishlist -->
+<section id="wishlist">
+  <div class="container">
+    <h2>💖 Wishlist Kamu</h2>
+    <ul id="wishlist-list" class="wishlist-list"></ul>
+      <!-- Daftar produk akan diisi via JavaScript -->
+    </ul>
+  </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak">
+  <div class="container">
+    <h2>Hubungi Kami</h2>
+    <div class="kontak-list">
+
+      <div class="kontak-item">
+        <i class="fas fa-envelope"></i>
+        <p><a href="mailto:wulanherlina0108@gmail.com">wulanherlina0108@gmail.com</a></p>
+      </div>
+
+      <div class="kontak-item">
+        <i class="fab fa-whatsapp"></i>
+        <p><a href="https://wa.me/6281324278860" target="_blank">+62 813-2427-8860</a></p>
+      </div>
+
+      <div class="kontak-item">
+        <i class="fab fa-instagram"></i>
+        <p><a href="https://instagram.com/wulanhrl_" target="_blank">@wulanhrl_</a></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Tentang Kami</h4>
+      <p>Kami menyediakan berbagai pilihan tas elegan dan berkualitas, cocok untuk segala suasana. Temukan tas impianmu sekarang juga!</p>
+    </div>
+   
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Halaman E Commerce Sederhana. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<!-- Notifikasi -->
+<div class="notification" id="notif">Produk telah ditambahkan ke keranjang!</div>
+
+  <script>
+    // Ambil elemen pencarian dan produk
+    const searchInput = document.querySelector('.search-box input');
+    const products = document.querySelectorAll('.product');
+  
+    // Event saat user mengetik
+    searchInput.addEventListener('input', function () {
+      const keyword = searchInput.value.toLowerCase();
+  
+      products.forEach(product => {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+  
+        // Tampilkan/hilangkan berdasarkan kata kunci
+        if (productName.includes(keyword)) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+<!-- Modal Checkout -->
+<div id="checkout-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Checkout</h2>
+    <form id="checkout-form">
+      <input type="text" placeholder="Nama Lengkap" required><br>
+      <input type="text" placeholder="Alamat Lengkap" required><br>
+      <select required>
+        <option value="">Pilih Metode Pembayaran</option>
+        <option value="transfer">Transfer Bank</option>
+        <option value="cod">Cash on Delivery</option>
+        <option value="qris">QRIS</option>
+      </select><br>
+      <button type="submit" class="checkout-btn">Kirim Pesanan</button>
+    </form>
+  </div>
+</div>
+
+<!-- Wishlist -->
+<div id="wishlist-notif" class="notification">Produk disimpan ke Wishlist!</div>
+
+<script>
+  const keranjang = [];
+  const tabelKeranjang = document.querySelector('#tabel-keranjang tbody');
+  const totalBelanja = document.getElementById('total-belanja');
+
+  const notif = document.getElementById('notif');
+
+document.querySelectorAll('.beli-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const nama = btn.dataset.nama;
+    const harga = parseInt(btn.dataset.harga);
+
+    // Cek apakah produk sudah ada
+    const produkAda = keranjang.find(item => item.nama === nama);
+    if (produkAda) {
+      produkAda.jumlah++;
+    } else {
+      keranjang.push({ nama, harga, jumlah: 1 });
+    }
+
+    // Tampilkan notifikasi
+    notif.style.display = 'block';
+    setTimeout(() => {
+      notif.style.display = 'none';
+    }, 3000); // sembunyikan setelah 3 detik
+
+    renderKeranjang();
+  });
+});
+
+  function renderKeranjang() {
+    tabelKeranjang.innerHTML = '';
+    let total = 0;
+
+    keranjang.forEach((item, index) => {
+      const tr = document.createElement('tr');
+      const subtotal = item.harga * item.jumlah;
+      total += subtotal;
+
+      tr.innerHTML = `
+        <td>${item.nama}</td>
+        <td>${item.jumlah}</td>
+        <td>Rp${item.harga.toLocaleString()}</td>
+        <td>Rp${subtotal.toLocaleString()}</td>
+        <td><button onclick="hapusItem(${index})">Hapus</button></td>
+      `;
+      tabelKeranjang.appendChild(tr);
+    });
+
+    totalBelanja.textContent = `Total: Rp${total.toLocaleString()}`;
+  }
+
+  function hapusItem(index) {
+    keranjang.splice(index, 1);
+    renderKeranjang();
+  }
+
+  document.getElementById('checkout').addEventListener('click', () => {
+    if (keranjang.length === 0) {
+      alert("Keranjang masih kosong.");
+    } else {
+      alert("Checkout berhasil! Terima kasih sudah berbelanja.");
+      keranjang.length = 0; // Kosongkan keranjang
+      renderKeranjang();
+    }
+  });
+
+  // Modal Checkout
+const modal = document.getElementById("checkout-modal");
+const closeModal = document.querySelector(".close-modal");
+const formCheckout = document.getElementById("checkout-form");
+
+document.getElementById("checkout").addEventListener("click", () => {
+  if (keranjang.length === 0) {
+    alert("Keranjang masih kosong.");
+  } else {
+    modal.style.display = "flex";
+  }
+});
+
+closeModal.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+};
+
+formCheckout.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Pesanan kamu telah dikirim! Terima kasih 🙏");
+  keranjang.length = 0;
+  renderKeranjang();
+  modal.style.display = "none";
+});
+
+// WISHLIST
+const wishlistNotif = document.getElementById("wishlist-notif");
+
+document.querySelectorAll(".product").forEach(product => {
+  const simpanBtn = document.createElement("button");
+  simpanBtn.innerHTML = "❤ Simpan";
+  simpanBtn.style.marginLeft = "10px";
+  simpanBtn.style.background = "#8b5e3c";
+  simpanBtn.style.color = "#fff";
+  simpanBtn.style.border = "none";
+  simpanBtn.style.padding = "5px 10px";
+  simpanBtn.style.borderRadius = "5px";
+  simpanBtn.style.cursor = "pointer";
+
+  simpanBtn.addEventListener("click", () => {
+    const nama = product.querySelector("h3").textContent;
+    saveToWishlist(nama);
+    wishlistNotif.style.display = "block";
+    setTimeout(() => {
+      wishlistNotif.style.display = "none";
+    }, 2000);
+  });
+
+  product.appendChild(simpanBtn);
+});
+
+function saveToWishlist(namaProduk) {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  if (!wishlist.includes(namaProduk)) {
+    wishlist.push(namaProduk);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }
+}
+
+function loadWishlist() {
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  const listEl = document.getElementById("wishlist-list");
+
+  listEl.innerHTML = '';
+
+  if (wishlist.length === 0) {
+    listEl.innerHTML = '<p>Belum ada produk yang disimpan.</p>';
+    return;
+  }
+
+  wishlist.forEach((namaProduk, index) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      <span>${namaProduk}</span>
+      <button onclick="hapusDariWishlist(${index})">Hapus</button>
+    `;
+    listEl.appendChild(li);
+  });
+}
+
+function hapusDariWishlist(index) {
+  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  wishlist.splice(index, 1);
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  loadWishlist();
+}
+
+// Jalankan loadWishlist saat halaman dimuat
+document.addEventListener('DOMContentLoaded', loadWishlist);
+</script>
+
+</body>
+</html>
