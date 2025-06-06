@@ -348,22 +348,6 @@ footer {
   background-color: #4b2e2e;
 }
 
-@media (max-width: 768px) {
-  .main-nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .search-box {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
 /* Modal Checkout */
 .modal {
   display: none;
@@ -401,4 +385,34 @@ footer {
   right: 15px;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .wishlist-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .wishlist-list button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wishlist-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .wishlist-list button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product button {
+    width: 100%;
+  }
 }
