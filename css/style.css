@@ -416,3 +416,34 @@ footer {
     width: 100%;
   }
 }
+
+.wishlist-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+
+.wishlist-list li div {
+  flex-grow: 1;
+}
+
+@media (max-width: 600px) {
+  .wishlist-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wishlist-list li img {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .wishlist-list button {
+    width: 100%;
+  }
+}

@@ -423,12 +423,15 @@ formCheckout.addEventListener("submit", (e) => {
   modal.style.display = "none";
 });
 
+// ============================
 // WISHLIST
+// ============================
 const wishlistNotif = document.getElementById("wishlist-notif");
 
 document.querySelectorAll(".product").forEach(product => {
   const simpanBtn = document.createElement("button");
-  simpanBtn.innerHTML = "❤ Simpan";
+  simpanBtn.textContent = "❤ Simpan";
+  simpanBtn.classList.add("wishlist-btn");
   simpanBtn.style.marginLeft = "10px";
   simpanBtn.style.background = "#8b5e3c";
   simpanBtn.style.color = "#fff";
@@ -439,20 +442,27 @@ document.querySelectorAll(".product").forEach(product => {
 
   simpanBtn.addEventListener("click", () => {
     const nama = product.querySelector("h3").textContent;
-    saveToWishlist(nama);
+    const harga = product.querySelector("p:nth-of-type(2)").textContent;
+    const gambar = product.querySelector("img").getAttribute("src");
+
+    saveToWishlist(nama, harga, gambar);
+
     wishlistNotif.style.display = "block";
     setTimeout(() => {
       wishlistNotif.style.display = "none";
     }, 2000);
+
+    loadWishlist(); // perbarui tampilan wishlist
   });
 
   product.appendChild(simpanBtn);
 });
 
-function saveToWishlist(namaProduk) {
+function saveToWishlist(namaProduk, hargaProduk, gambarProduk) {
   let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-  if (!wishlist.includes(namaProduk)) {
-    wishlist.push(namaProduk);
+
+  if (!wishlist.some(item => item.nama === namaProduk)) {
+    wishlist.push({ nama: namaProduk, harga: hargaProduk, gambar: gambarProduk });
     localStorage.setItem("wishlist", JSON.stringify(wishlist));
   }
 }
@@ -465,17 +475,26 @@ function loadWishlist() {
 
   if (wishlist.length === 0) {
     listEl.innerHTML = '<p>Belum ada produk yang disimpan.</p>';
-    return;
+  } else {
+    wishlist.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <img src="${item.gambar}" alt="${item.nama}" style="width: 80px; border-radius: 6px;">
+        <div>
+          <strong>${item.nama}</strong><br>
+          <span>${item.harga}</span>
+        </div>
+        <button onclick="hapusDariWishlist(${index})">Hapus</button>
+      `;
+      listEl.appendChild(li);
+    });
   }
 
-  wishlist.forEach((namaProduk, index) => {
-    const li = document.createElement("li");
-    li.innerHTML = `
-      <span>${namaProduk}</span>
-      <button onclick="hapusDariWishlist(${index})">Hapus</button>
-    `;
-    listEl.appendChild(li);
-  });
+  // Perbarui jumlah di menu navigasi
+  const link = document.querySelector('a[href="#wishlist"]');
+  if (link) {
+    link.textContent = `Wishlist (${wishlist.length})`;
+  }
 }
 
 function hapusDariWishlist(index) {
@@ -485,8 +504,7 @@ function hapusDariWishlist(index) {
   loadWishlist();
 }
 
-// Jalankan loadWishlist saat halaman dimuat
-document.addEventListener('DOMContentLoaded', loadWishlist);
+document.addEventListener("DOMContentLoaded", loadWishlist);
 </script>
 
 </body>
